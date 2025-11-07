@@ -1,0 +1,295 @@
+:root{
+    --bg-color-primary:#f78a76; /* fond corail */
+    --bg-color-secondary:#25a2c3; /* fond bleu */
+    --text-bg-dark:#FFF;
+    --couleur-lien:#f78a76; /* couleur des liens */
+    --font-logo:'Pacifico';
+    --font-textes:'Open Sans';
+    --font-titres-bouton:'Montserrat';
+}
+
+/* ================ Fonts =================*/
+
+/* pacifico-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/pacifico-v23-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/open-sans-v44-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/montserrat-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* ======= Généralité ======== */
+*{ /* Reset des marges html */
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bouton{
+    background-color: var(--bg-color-primary);
+    color: var(--text-bg-dark);
+    padding: 8px 24px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    font-family: var(--font-titres-bouton);
+}
+
+body{
+    font-family: var(--font-textes);
+    font-size: 18px;
+}
+
+/* ======= Header ========= */
+
+#tete{
+    text-align: center;
+    padding: 40px;
+}
+
+#logo a{
+    font-family: var(--font-logo);
+    color: var(--couleur-lien);
+    font-size: 2.5rem;
+}
+
+#menuprincipal ul{
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+#menuprincipal ul li{
+    margin: 32px 16px 0;
+}
+
+#menuprincipal ul li a{
+    color: black;
+}
+
+#menuprincipal ul li a:hover{
+    color: var(--couleur-lien);
+}
+
+#menuprincipal ul li a.choix{
+    color: var(--couleur-lien);
+    font-size:  1.4rem;
+}
+
+/* ============ Bienvenue ==========*/
+
+#bienvenue{
+    background-image: url(images/paysage.jpg);
+    height: 440px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#bienvenue h1{
+    color: var(--couleur-lien);
+    text-shadow: #6d3a31 1px 1px 2px ; /* offset-x | offset-y | blur-radius | color */
+    font-family: var(--font-titres-bouton);
+}
+
+#bienvenue p{
+    width: 60%;
+    color: var(--text-bg-dark);
+    padding: 8px 24px;
+    margin: 24px;
+    background-color: rgba(0, 0, 0, 0.247);
+}
+
+/* ========== Categorie ============= */
+
+#categories{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#categories .colonne{
+    width: 30%;
+}
+
+#categories .colonne:first-child{
+    text-align: end;
+}
+
+#categories .colonne h2{
+    color: var(--bg-color-secondary);
+    font-family: var(--font-titres-bouton);
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#categories .colonne p{
+    color: rgba(0, 0, 0, 0.418);
+    margin-bottom: 24px;
+    font-size: 0.8rem;
+}
+
+#categories .colonne img{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-top: 24px;
+    width: 100%;
+}
+
+    
+    
+/* ============= CTA =============== */
+
+#cta{
+    background-color: var(--bg-color-primary);
+    height: 344px;
+    color: var(--text-bg-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 48px 0;
+    
+}
+
+#cta h3{
+    font-family: var(--font-titres-bouton);
+    font-weight: bold;
+}
+
+#cta p{
+    width: 60%;
+    margin: 8px ;
+    padding: 8px 24px;
+    text-align: center;
+    font-size: .8rem;
+}
+
+#cta .bouton{
+    font-weight: bold;
+    background-color: var(--text-bg-dark);
+    color: var(--bg-color-primary);
+}
+
+/* ================= En avant ================= */
+
+#enavant{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 48px;
+
+}
+#enavant .post{
+    width: 30%;
+    border: solid rgba(0, 0, 0, 0.089) ;
+    padding-bottom: 24px;;
+}
+
+#enavant .post img{
+    width: 100%;
+}
+
+#enavant .post h4 a{
+    color: #25a2c3;
+    text-shadow: 1 px 1 px 5px #00000042;
+    font-size: 1.5rem;
+}
+
+#enavant .post h4,p{
+    padding: 16px 16px 0;
+}
+
+#enavant .post p{
+    color: rgba(0, 0, 0, 0.267);
+}
+
+/* ============== Pied =================== */
+
+#pied{   
+    background-color: var(--bg-color-secondary);
+    color: var(--text-bg-dark);
+}
+
+#pied #Contact{
+    height: 244px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ffffff59;
+}
+
+#pied #Contact h5{
+    font-family: var(--font-titres-bouton);
+    font-size: 1.8rem;
+    padding: 15px;
+}
+
+#pied #Contact ul{
+    display: flex;
+    gap: 48px;
+    color: #ffffff73;
+    margin-top: 24px;
+}
+
+#pied #Contact i{
+    font-size: 1.5rem;
+}
+
+#copyrights{
+    text-align: center;
+    padding: 24px;
+
+}
+
+#copyrights a{
+    color: #FFF;
+}
+
+/* ============ Action ================= */
+#enavant .post:hover {
+    background-color: #f7897694;
+    width: 31%;
+    height: 31%;
+}
+ .bouton:active{
+    color: red;
+ }
